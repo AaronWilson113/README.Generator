@@ -9,6 +9,8 @@ const questions = inquirer
                             type: 'input',
                             name: 'projectTitle',
                             message: 'What is your project title?',
+                            // validates input
+                            validate: (value)=>{ if(value){return true} else {return 'please input a project title to continue'}}
                         },
                         {
                             type: 'input',
@@ -35,17 +37,22 @@ const questions = inquirer
                             name: 'testInstruction',
                             message: 'How can you test the application?',
                         }
-                    ]);
+                    ]) 
+                    .then(function(answer){
+                        console.log(answer);
+                    });
+                    
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFileSync('README.MD', data)
-}
+function writeToFile(fileName, data) {}
+
+
 
 // TODO: Create a function to initialize app
 function init() {}
 
+
 // Function call to initialize app
 init()
-    .then(writeToFile)
+
     
