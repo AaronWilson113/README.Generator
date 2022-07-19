@@ -16,26 +16,36 @@ const questions = () => {
             type: 'input',
             name: 'description',
             message: 'How would you describe your project?',
+             // validates input
+             validate: (value)=>{ if(value){return true} else {return 'please describe your project to continue'}}
         },
         {
             type: 'input',
             name: 'installationInstructions',
             message: 'What steps do you take to install your application?',
+             // validates input
+             validate: (value)=>{ if(value){return true} else {return 'please add installation instructions to continue'}}
         },
         {
             type: 'input',
             name: 'usageInfo',
             message: 'How do you use your application?',
+             // validates input
+             validate: (value)=>{ if(value){return true} else {return 'please input usage instructions to continue'}}
         },
         {
             type: 'input',
             name: 'contributionGuide',
             message: 'What are the guidelines for contribution?',
+             // validates input
+             validate: (value)=>{ if(value){return true} else {return 'please input contribution guidelines to continue'}}
         },
         {
             type: 'input',
             name: 'testInstruction',
             message: 'How can you test the application?',
+             // validates input
+             validate: (value)=>{ if(value){return true} else {return 'please input test guidelines to continue'}}
         },
     ]);
 };
@@ -52,7 +62,7 @@ function writeToFile(fileName, data) {}
 // TODO: Create a function to initialize app
 function init() {
     questions()
-    .then((answers) => fs.writeFileSync('readme', answers))
+    .then((answers) => fs.writeFileSync('readme', generateMarkdown(answers)))
     .then(() => console.log('success!'))
     .catch((err) => console.error(err));
 }
