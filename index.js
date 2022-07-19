@@ -62,7 +62,7 @@ function writeToFile(fileName, data) {}
 // TODO: Create a function to initialize app
 function init() {
     questions()
-    .then((answers) => fs.writeFileSync('readme', generateMarkdown(answers)))
+    .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
     .then(() => console.log('success!'))
     .catch((err) => console.error(err));
 }
