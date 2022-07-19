@@ -38,9 +38,13 @@ const questions = inquirer
                             message: 'How can you test the application?',
                         }
                     ]) 
-                    .then(function(answer){
-                        console.log(answer);
-                    });
+                    .then((data => {
+                        
+                        Answers = data
+                        console.log(Answers)
+                        return Answers
+                    }))
+                    
                     
 
 // TODO: Create a function to write README file
