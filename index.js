@@ -48,14 +48,18 @@ function writeToFile(fileName, data) {}
 
 
 
+
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions()
+    .then((answers) => fs.writeFileSync('readme', answers))
+    .then(() => console.log('success!'))
+    .catch((err) => console.error(err));
+}
 
 
 
 // Function call to initialize app
-init(
-    questions()
-)
+init()
 
     
