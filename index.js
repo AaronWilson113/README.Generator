@@ -47,6 +47,13 @@ const questions = () => {
              // validates input
              validate: (value)=>{ if(value){return true} else {return 'please input test guidelines to continue'}}
         },
+        {
+            type: 'list',
+            name: 'liscence',
+            message: 'What liscence do you want for your project?',
+            choices: ['mit', 'gnu', 'gpl' ]
+
+        }
     ]);
 };
 
@@ -55,14 +62,8 @@ const questions = () => {
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, generateMarkdown(data))
-    // .then(() => console.log('success!'))
-    // .catch((err) => console.error(err));
     
 }
-
-
-
-
 
 // TODO: Create a function to initialize app
 function init() {
@@ -72,8 +73,6 @@ function init() {
     .catch((err) => console.error(err));
     
 }
-
-
 
 // Function call to initialize app
 init()
