@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils')
+const liscences = ['MIT' , 'GPL' , 'APACHE' , 'None']
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt ([
@@ -51,7 +52,7 @@ const questions = () => {
             type: 'list',
             name: 'liscence',
             message: 'What liscence do you want for your project?',
-            choices: ['mit', 'gnu', 'gpl' ]
+            choices: liscences
 
         }
     ]);
