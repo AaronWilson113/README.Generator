@@ -1,14 +1,15 @@
-# as
+# aarons project
   ## Description
-  as
+  its a project
+  (https://shields.io/badge/license-undefined-blue)
   ## Installation 
-  as
+  many steps
   ## Usage
-  as
+  crying
   ## Contributing
-  as
+  give me money
   ## tests
-  as
+  by testing it out
   ## Liscense 
   MIT
   ## table of contents
