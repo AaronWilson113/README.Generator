@@ -1,11 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-   let liscenceBadge = "";
+  let badge = "";
 
-   liscenceBadge = "(https://shields.io/badge/license-" + license + "-blue)";
+  if(license != "None") {
+    badge = "![License Badge](https://shields.io/badge/license-" + license + "-green)";
+  }
 
-   return liscenceBadge;
+  return badge;
    
 }
 
