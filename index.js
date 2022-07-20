@@ -50,7 +50,7 @@ const questions = () => {
         },
         {
             type: 'list',
-            name: 'liscence',
+            name: 'license',
             message: 'What liscence do you want for your project?',
             choices: liscences
 
